@@ -1,3 +1,5 @@
+package BinarySearch;
+
 public class Search2DMatrix74 {
     public static  boolean searchMatrix(int[][] matrix, int target) {
         // Get total number of rows and columns
