@@ -4,6 +4,11 @@ import java.util.Arrays;
 
 public class ReverseString344 {
 
+    public static String reverseString(String s){
+        return new  StringBuilder(s).reverse().toString();
+
+    }
+
     public static  void reverseString(char[] s) {
        int  i = 0 , j =s.length-1;
        int mid = i +(j-i)/2;
@@ -19,9 +24,11 @@ public class ReverseString344 {
     public static void main(String[] args) {
 
         char[] s =  {'h','e','l','l','o'};
-        reverseString(s);
-        for (char c : s) {
-            System.out.println(c);
-        }
+//        reverseString(s);
+//        for (char c : s) {
+//            System.out.println(c);
+//        }
+
+        System.out.printf(reverseString("hello"));
     }
 }
