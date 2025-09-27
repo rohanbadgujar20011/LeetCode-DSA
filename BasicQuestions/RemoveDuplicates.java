@@ -38,6 +38,19 @@ public class RemoveDuplicates {
         return sb.toString();
     }
 
+    public static void removeDuplicateFromArrayList(List<Integer> list) {
+        // Sort the list first
+        list.sort((a, b) -> a - b);
+
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i).equals(list.get(i - 1))) {
+                list.remove(i);
+                i--; // adjust index after removal
+            }
+        }
+
+        System.out.println(list);
+    }
     public static void main(String[] args) {
         String input = "programming";
 
@@ -45,5 +58,8 @@ public class RemoveDuplicates {
         System.out.println("HashSet approach: " + removeDuplicatesHashSet(input));
         System.out.println("Streams approach: " + removeDuplicatesStream(input));
         System.out.println("LinkedHashSet approach: " + removeDuplicatesLinkedHashSet(input));
+        List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 4, 5));
+        removeDuplicateFromArrayList(list);
+
     }
 }
