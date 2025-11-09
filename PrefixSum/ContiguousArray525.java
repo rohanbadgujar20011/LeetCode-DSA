@@ -17,7 +17,7 @@ nums[i] is either 0 or 1.
  */
 
 
-package PreFix;
+package PrefixSum;
 
 import java.util.HashMap;
 import java.util.Map;
